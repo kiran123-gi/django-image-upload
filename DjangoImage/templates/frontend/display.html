@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading the images</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>Images Name</th>
+                <th>Images</th>
+                <th>Date and Time</th>
+            </tr>
+            {% for i in objects %}
+            <tr>
+                <td>{{ i.imageName }}</td>
+                <td><img src="{{ i.image.url }}" alt = "{{ i.imageName }} " width = 250px height = 250px></td>
+                <td>{{ i.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>""
+</html>
